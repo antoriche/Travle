@@ -1,0 +1,80 @@
+service: boilerplate-api
+
+frameworkVersion: "3"
+
+useDotenv: true
+variablesResolutionMode: 20210326
+
+plugins:
+  - serverless-middleware
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs20.x
+  lambdaHashingVersion: "20201221"
+  timeout: 30
+
+  apiGateway:
+    restApiId: ${env:API_GATEWAY_ID, ""}
+    restApiRootResourceId: ${env:API_GATEWAY_ROOT_ID, ""}
+
+custom:
+  middleware:
+    pos:
+      - src/middlewares/cors.setCorsHeaders
+
+functions:
+  hello:
+    handler: src/hello.handler
+    events:
+      - http:
+          path: /hello
+          method: get
+          #authorizer:
+          #  name: cognitoAuthorizer
+          #  arn: ${env:APIENV_COGNITO_ARN}
+          cors: true
+  listUsers:
+    handler: src/users.getUsers
+    events:
+      - http:
+          path: /users
+          method: get
+          authorizer:
+            name: cognitoAuthorizer
+            arn: ${env:boilerplate_COGNITO_ARN}
+          cors: true
+  createUser:
+    handler: src/users.createUser
+    events:
+      - http:
+          path: /users
+          method: post
+          authorizer:
+            name: cognitoAuthorizer
+            arn: ${env:boilerplate_COGNITO_ARN}
+          cors: true
+  deleteUser:
+    handler: src/users.deleteUser
+    events:
+      - http:
+          path: /users/{userName}
+          method: delete
+          authorizer:
+            name: cognitoAuthorizer
+            arn: ${env:boilerplate_COGNITO_ARN}
+          cors: true
+  updateUserRole:
+    handler: src/users.updateUser
+    events:
+      - http:
+          path: /users/{userName}/role
+          method: put
+          authorizer:
+            name: cognitoAuthorizer
+            arn: ${env:boilerplate_COGNITO_ARN}
+          cors: true

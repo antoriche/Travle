@@ -1,0 +1,19 @@
+.userMenuMenuItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 8px;
+}
+
+.userMenuMenuItem:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.userMenuPopover {
+  margin-right: 12px;
+}
+
+.userMenuPopover :hover {
+  cursor: pointer;
+}
