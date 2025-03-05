@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "https://antoriche.github.io/Travle/static/css/main.daab5cb7.css",
-    "main.js": "https://antoriche.github.io/Travle/static/js/main.7381747a.js",
-    "static/js/432.888eb7e6.chunk.js": "https://antoriche.github.io/Travle/static/js/432.888eb7e6.chunk.js",
+    "main.js": "https://antoriche.github.io/Travle/static/js/main.616adda5.js",
+    "static/js/432.587ea845.chunk.js": "https://antoriche.github.io/Travle/static/js/432.587ea845.chunk.js",
     "static/js/682.362a80ab.chunk.js": "https://antoriche.github.io/Travle/static/js/682.362a80ab.chunk.js",
     "static/js/488.1c1c7559.chunk.js": "https://antoriche.github.io/Travle/static/js/488.1c1c7559.chunk.js",
     "static/js/90.8783cb1b.chunk.js": "https://antoriche.github.io/Travle/static/js/90.8783cb1b.chunk.js",
     "service-worker.js": "https://antoriche.github.io/Travle/service-worker.js",
     "index.html": "https://antoriche.github.io/Travle/index.html",
     "main.daab5cb7.css.map": "https://antoriche.github.io/Travle/static/css/main.daab5cb7.css.map",
-    "main.7381747a.js.map": "https://antoriche.github.io/Travle/static/js/main.7381747a.js.map",
-    "432.888eb7e6.chunk.js.map": "https://antoriche.github.io/Travle/static/js/432.888eb7e6.chunk.js.map",
+    "main.616adda5.js.map": "https://antoriche.github.io/Travle/static/js/main.616adda5.js.map",
+    "432.587ea845.chunk.js.map": "https://antoriche.github.io/Travle/static/js/432.587ea845.chunk.js.map",
     "682.362a80ab.chunk.js.map": "https://antoriche.github.io/Travle/static/js/682.362a80ab.chunk.js.map",
     "488.1c1c7559.chunk.js.map": "https://antoriche.github.io/Travle/static/js/488.1c1c7559.chunk.js.map",
     "90.8783cb1b.chunk.js.map": "https://antoriche.github.io/Travle/static/js/90.8783cb1b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.daab5cb7.css",
-    "static/js/main.7381747a.js"
+    "static/js/main.616adda5.js"
   ]
 }

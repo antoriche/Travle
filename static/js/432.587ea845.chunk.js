@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkboilerplate_app=self.webpackChunkboilerplate_app||[]).push([[432],{5432:(e,t,r)=>{r.r(t),r.d(t,{default:()=>o});r(5043);var s=r(86),a=r(579);const o=function(){return(0,a.jsxs)("div",{children:[(0,a.jsx)("h2",{children:"Welcome on Travle !"}),(0,a.jsx)("p",{children:"The goal of the game is to find the shortest path between two countries / territories."}),(0,a.jsx)("p",{children:"Let's start a game !!!"}),(0,a.jsx)(s.A,{style:{backgroundColor:"#05050520",borderRadius:10}})]})}}}]);
+//# sourceMappingURL=432.587ea845.chunk.js.map
