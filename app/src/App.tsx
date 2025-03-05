@@ -28,7 +28,7 @@ if (!shouldSkipAuth()) {
   configureAuth();
 }
 
-const basename = new URL(process.env.PUBLIC_URL || window.location.href).pathname;
+export const basename = new URL(process.env.PUBLIC_URL || window.location.href).pathname;
 const router = createBrowserRouter(routes as RouteObject[], {
   basename,
 });

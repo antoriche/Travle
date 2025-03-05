@@ -5,11 +5,12 @@ import { GameEngine } from "shared/GameEngine";
 import { world } from "shared/dataset";
 import React from "react";
 import { generatePathForGame, getAllShortestPaths } from "shared/algo";
+import { basename } from "@/App";
 
 export function GamePage() {
   const { gameEngine, setGameEngine } = useGameEngine();
   if (!gameEngine) {
-    window.location.href = "/";
+    window.location.href = basename;
     console.error("No game engine found");
     return null;
   }

@@ -4,6 +4,7 @@ import { Button, Layout, Popover } from "antd";
 import "./HeaderMenu.css";
 import { PlusOutlined } from "@ant-design/icons";
 import NewGameForm from "../Game/NewGameForm";
+import { basename } from "@/App";
 
 type HeaderMenuProps = {};
 function HeaderMenu({}: HeaderMenuProps) {
@@ -25,7 +26,7 @@ function HeaderMenu({}: HeaderMenuProps) {
         }}
       >
         <a
-          href="/"
+          href={basename}
           style={{
             color: "white",
             textDecoration: "none",
