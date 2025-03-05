@@ -6,7 +6,7 @@
   "homepage": "http://antoriche.github.io/Travle",
   "scripts": {
     "predeploy": "(cd app && npm run build)",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d app/build",
     "test": "(cd app && npm run test)",
     "install": "(cd shared && npm install) && (cd app && npm install)",
     "start": "(cd shared && npx ttab npm run dev) && (cd app && npx ttab npm start)",
