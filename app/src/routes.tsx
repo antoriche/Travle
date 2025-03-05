@@ -57,36 +57,19 @@ export const routes: DataRouteObjectWithPermission[] = [
         },
       },
       {
-        id: "explorer",
-        path: "/explorer",
+        id: "game",
+        path: "/game",
         element: (
           <React.Suspense fallback={<LoadingSpin />}>
             {React.createElement(
-              lazy(() => import("./components/Explorer/Explorer")),
+              lazy(() => import("./components/Game/GamePage")),
               {},
             )}
           </React.Suspense>
         ),
+        errorElement: <ErrorBoundary />,
         handle: {
-          title: "Explorer",
-          icon: CompassOutlined,
-        },
-      },
-      {
-        id: "users",
-        path: "/users",
-        requiredPermission: "ADMIN",
-        element: (
-          <React.Suspense fallback={<LoadingSpin />}>
-            {React.createElement(
-              lazy(() => import("./components/Users/Users")),
-              {},
-            )}
-          </React.Suspense>
-        ),
-        handle: {
-          title: "Users",
-          icon: UserOutlined,
+          title: "Game",
         },
       },
       {

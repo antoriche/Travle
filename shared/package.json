@@ -12,6 +12,7 @@
     "dev": "tsc -w"
   },
   "devDependencies": {
+    "@types/geojson": "^7946.0.16",
     "@types/node": "^22.8.6",
     "typescript": "^5.0.4"
   }

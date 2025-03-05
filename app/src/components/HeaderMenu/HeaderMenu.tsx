@@ -1,52 +1,36 @@
 import React from "react";
-import { Layout } from "antd";
+import { Button, Layout, Popover } from "antd";
 
 import UserMenu from "../UserMenu/UserMenu";
 import "./HeaderMenu.css";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { MenuFoldOutlined, MenuUnfoldOutlined, PlusOutlined } from "@ant-design/icons";
 import { useMatches } from "react-router";
+import NewGameForm from "../Game/NewGameForm";
 
 const { Header } = Layout;
 
-type HeaderMenuProps = {
-  collapsed: boolean;
-  toggleCollapse: () => void;
-};
-function HeaderMenu({ collapsed, toggleCollapse }: HeaderMenuProps) {
-  const Icon = collapsed ? MenuUnfoldOutlined : MenuFoldOutlined;
-  const matches = useMatches();
-  const handle = matches?.[matches.length - 1]?.handle as { title: string } | undefined;
-  const title = handle?.title || "";
-
+type HeaderMenuProps = {};
+function HeaderMenu({}: HeaderMenuProps) {
   return (
-    <Header
+    <header
       style={{
-        background: "#fff",
-        padding: 0,
-        display: "flex",
-        alignItems: "center",
-        zIndex: 1,
-        boxShadow: "0 3px 6px lightgrey",
-        clipPath: "inset(0px 0px -6px 0px)",
-        justifyContent: "space-between",
+        padding: "24px",
+
+        backgroundColor: "#00000030",
       }}
     >
-      <div className="header-menu-left">
-        {toggleCollapse && ( // show only if we have toggleCollapse
-          <Icon className="trigger" onClick={toggleCollapse} />
-        )}
-        <h2
-          style={{
-            margin: 0,
-          }}
-        >
-          {title}
-        </h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          maxWidth: "1200px",
+          margin: "auto",
+        }}
+      >
+        <h1>Travle</h1>
       </div>
-      <div className="header-menu-right">
-        <UserMenu />
-      </div>
-    </Header>
+    </header>
   );
 }
 

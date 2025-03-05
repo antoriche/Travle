@@ -14,7 +14,7 @@
   "plugins": ["prettier", "jest", "import", "unused-imports", "eslint-comments", "consistent-default-export-name"],
   "ignorePatterns": ["**/dist/**"],
   "rules": {
-    "eslint-comments/require-description": ["error"],
+    "eslint-comments/require-description": ["warn"],
     "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
     "prettier/prettier": ["error", { "trailingComma": "all" }],
     "unused-imports/no-unused-imports": "warn",
