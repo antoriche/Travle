@@ -2,7 +2,6 @@ import { useGameEngine } from "@/hooks/useGameEngine";
 import { useNavigate } from "react-router";
 import Game from "./Game";
 import { GameEngine } from "shared/GameEngine";
-import { world } from "shared/dataset";
 import React from "react";
 import { generatePathForGame, getAllShortestPaths } from "shared/algo";
 import { basename } from "@/App";
