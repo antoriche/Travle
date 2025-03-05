@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "homepage": "http://antoriche.github.io/Travle",
   "scripts": {
+    "predeploy": "(cd app && npm run build)",
+    "deploy": "gh-pages -d build",
     "test": "(cd app && npm run test)",
     "install": "(cd shared && npm install) && (cd app && npm install)",
     "start": "(cd shared && npx ttab npm run dev) && (cd app && npx ttab npm start)",
@@ -22,6 +25,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.3.0",
     "prettier": "3.4.2",
     "prettier-eslint": "^16.3.0",
     "tslint": "^6.1.3",
