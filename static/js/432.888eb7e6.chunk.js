@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkboilerplate_app=self.webpackChunkboilerplate_app||[]).push([[432],{5432:(e,r,a)=>{a.r(r),a.d(r,{default:()=>p});a(5043);var l=a(86),s=a(579);const p=function(){return(0,s.jsx)("div",{children:(0,s.jsx)(l.A,{style:{backgroundColor:"#05050520",borderRadius:10}})})}}}]);
+//# sourceMappingURL=432.888eb7e6.chunk.js.map
