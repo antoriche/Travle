@@ -28,7 +28,20 @@ function HeaderMenu({}: HeaderMenuProps) {
           margin: "auto",
         }}
       >
-        <h1>Travle</h1>
+        <a
+          href="/"
+          style={{
+            color: "white",
+            textDecoration: "none",
+          }}
+        >
+          <h1>Travle</h1>
+        </a>
+        <Popover content={<NewGameForm />}>
+          <Button type="primary" shape="round" icon={<PlusOutlined />}>
+            New Game
+          </Button>
+        </Popover>
       </div>
     </header>
   );

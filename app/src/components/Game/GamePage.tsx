@@ -8,19 +8,9 @@ import { generatePathForGame, getAllShortestPaths } from "shared/algo";
 
 export function GamePage() {
   const { gameEngine, setGameEngine } = useGameEngine();
-  const navigate = useNavigate();
   if (!gameEngine) {
-    //navigate("/");
-    const path = generatePathForGame(
-      world.features.map((f) => ({
-        id: `${f.id}`,
-        neighbors: f.properties.border_countries ?? [],
-      })),
-      3,
-      8,
-    );
-    const newGameEngine = new GameEngine(world, path[0], path[path.length - 1]);
-    setGameEngine(newGameEngine);
+    window.location.href = "/";
+    console.error("No game engine found");
     return null;
   }
 

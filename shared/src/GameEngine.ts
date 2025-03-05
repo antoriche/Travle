@@ -51,7 +51,6 @@ export class GameEngine {
       from,
       to,
     );
-    console.log(this.all_shortest_path);
   }
 
   guess(country: string) {

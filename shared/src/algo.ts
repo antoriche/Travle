@@ -87,8 +87,7 @@ export function getAllShortestPaths(graph: Array<{ id: string; neighbors: string
 }
 
 export function generatePathForGame(graph: Array<{ id: string; neighbors: string[] }>, minLen: number, maxLen: number): string[] {
-  minLen += 2;
-  const len = Math.floor(Math.random() * (maxLen - minLen + 1)) + minLen;
+  const len = Math.floor(Math.random() * (maxLen - minLen + 1)) + minLen + 2;
 
   const random_from = graph[Math.floor(Math.random() * graph.length)].id;
   const random_to = graph[Math.floor(Math.random() * graph.length)].id;
