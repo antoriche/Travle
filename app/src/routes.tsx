@@ -6,7 +6,6 @@ import { DataRouteObject, useRouteError } from "react-router";
 import AppLayout from "./AppLayout";
 import { QueryParamProvider } from "use-query-params";
 import HomeButton from "./components/UI/HomeButton";
-import { UserRole } from "shared/User";
 import RetryButton from "./components/UI/RetryButton";
 import { ReactRouter6Adapter } from "use-query-params/adapters/react-router-6";
 
@@ -24,7 +23,6 @@ export function ErrorBoundary() {
 }
 
 type DataRouteObjectWithPermission = Omit<DataRouteObject, "children"> & {
-  requiredPermission?: UserRole;
   children?: DataRouteObjectWithPermission[];
 };
 export const routes: DataRouteObjectWithPermission[] = [
@@ -92,5 +90,4 @@ export const navigationMenuRoutes = appendChildren(routes)
     title: route.handle?.title,
     icon: route.handle?.icon,
     disabled: route.handle?.disabled,
-    requiredPermission: route.requiredPermission,
   }));

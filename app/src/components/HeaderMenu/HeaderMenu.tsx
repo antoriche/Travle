@@ -1,13 +1,9 @@
 import React from "react";
 import { Button, Layout, Popover } from "antd";
 
-import UserMenu from "../UserMenu/UserMenu";
 import "./HeaderMenu.css";
-import { MenuFoldOutlined, MenuUnfoldOutlined, PlusOutlined } from "@ant-design/icons";
-import { useMatches } from "react-router";
+import { PlusOutlined } from "@ant-design/icons";
 import NewGameForm from "../Game/NewGameForm";
-
-const { Header } = Layout;
 
 type HeaderMenuProps = {};
 function HeaderMenu({}: HeaderMenuProps) {
