@@ -2,7 +2,7 @@ import { useGameEngine } from "@/hooks/useGameEngine";
 import { Button, Radio, Slider } from "antd";
 import React, { useMemo, useState } from "react";
 import { generatePathForGame } from "shared/algo";
-import { world, usa } from "shared/dataset";
+import { world, usa, france } from "shared/dataset";
 import PlotFigure from "../Utils/PlotFigure";
 import * as Plot from "@observablehq/plot";
 import { Colors } from "@/constants";
@@ -22,6 +22,10 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
         {
           name: "USA",
           map: usa,
+        },
+        {
+          name: "France",
+          map: france,
         },
       ] as const,
     [world],
