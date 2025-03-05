@@ -48,7 +48,7 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
           </Radio.Group>
         </div>
         <div style={{ width: "100%" }}>
-          Between {range[0]} and {range[1]} countries
+          Between {range[0]} and {range[1]} countries / territories
           <Slider
             style={{
               width: "100%",
