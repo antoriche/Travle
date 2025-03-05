@@ -2,6 +2,8 @@
 
 This is a personal project recreating [travle.earth](https://travle.earth) website.
 
+You can access the website at [antoriche.github.io/Travle](https://antoriche.github.io/Travle/)
+
 ## Run the app
 
 You'll need to run 2 terminals
