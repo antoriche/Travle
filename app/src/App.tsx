@@ -28,7 +28,10 @@ if (!shouldSkipAuth()) {
   configureAuth();
 }
 
-const router = createBrowserRouter(routes as RouteObject[]);
+const basename = new URL(process.env.PUBLIC_URL || window.location.href).pathname;
+const router = createBrowserRouter(routes as RouteObject[], {
+  basename,
+});
 
 function App() {
   return (

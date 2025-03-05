@@ -5,7 +5,7 @@
   "private": true,
   "homepage": "http://antoriche.github.io/Travle",
   "scripts": {
-    "predeploy": "(cd app && npm run build)",
+    "predeploy": "(cd app && PUBLIC_URL=https://antoriche.github.io/Travle/ npm run build)",
     "deploy": "gh-pages -d app/build",
     "test": "(cd app && npm run test)",
     "install": "(cd shared && npm install) && (cd app && npm install)",
