@@ -4,7 +4,7 @@
   "compounds": [
     {
       "name": "Run All",
-      "configurations": ["Transpile TypeScript from Shared Resources", "Run API", "Run App", "Storybook"],
+      "configurations": ["Transpile TypeScript from Shared Resources", "Run App", "Storybook"],
       "stopAll": true,
       "presentation": {
         "hidden": false,
@@ -21,15 +21,6 @@
       "cwd": "${workspaceFolder}/shared",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "console": "integratedTerminal"
-    },
-    {
-      "name": "Run API",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/api",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
       "console": "integratedTerminal"
     },
     {
