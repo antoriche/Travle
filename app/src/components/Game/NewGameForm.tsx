@@ -54,7 +54,7 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
   const { selectedMap, setSelectedMap, range, setRange } = useNewGameConfig();
 
   return (
-    <div style={{ width: 500, ...style }}>
+    <div style={{ width: 500, maxWidth: "100%", ...style }}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", padding: "1em", gap: "1em" }}>
         <div style={{ width: "100%" }}>
           <span style={{ marginRight: "0.5em" }}>Map:</span>
