@@ -18,14 +18,17 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
         {
           name: "World",
           map: world,
+          max: 15,
         },
         {
           name: "USA",
           map: usa,
+          max: 10,
         },
         {
           name: "France",
           map: france,
+          max: 11,
         },
       ] as const,
     [world],
@@ -39,7 +42,13 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", padding: "1em", gap: "1em" }}>
         <div style={{ width: "100%" }}>
           <span style={{ marginRight: "0.5em" }}>Map:</span>
-          <Radio.Group value={selectedMap} onChange={(e) => setSelectedMap(e.target.value)}>
+          <Radio.Group
+            value={selectedMap}
+            onChange={(e) => {
+              setRange([range[0], Math.min(range[1], e.target.value.max)]);
+              setSelectedMap(e.target.value);
+            }}
+          >
             {maps.map((map) => (
               <Radio.Button value={map} key={map.name}>
                 {map.name}
@@ -58,7 +67,7 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
             value={range}
             onChange={(value) => setRange(value)}
             min={1}
-            max={15}
+            max={selectedMap.max}
           />
         </div>
         <Button
