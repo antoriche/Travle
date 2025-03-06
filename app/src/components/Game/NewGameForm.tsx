@@ -8,34 +8,50 @@ import * as Plot from "@observablehq/plot";
 import { Colors } from "@/constants";
 import { GameEngine } from "shared/GameEngine";
 import { useNavigate } from "react-router";
+import { create } from "zustand";
+import { FeatureCollection, Geometry } from "geojson";
+
+type MapConfig = {
+  name: string;
+  map: FeatureCollection<Geometry, { name: string; border_countries: string[] }>;
+  max: number;
+};
+
+const MAPS = [
+  {
+    name: "World",
+    map: world,
+    max: 15,
+  },
+  {
+    name: "USA",
+    map: usa,
+    max: 10,
+  },
+  {
+    name: "France",
+    map: france,
+    max: 11,
+  },
+] as const;
+
+export const useNewGameConfig = create<{
+  selectedMap: MapConfig;
+  setSelectedMap: (map: MapConfig) => void;
+  range: [number, number];
+  setRange: (range: [number, number]) => void;
+}>((set) => ({
+  selectedMap: MAPS[0],
+  setSelectedMap: (map) => set({ selectedMap: map }),
+  range: [3, 8],
+  setRange: (range) => set({ range }),
+}));
 
 function NewGameForm({ style }: { style?: React.CSSProperties }) {
   const { setGameEngine } = useGameEngine();
   const navigate = useNavigate();
-  const maps = useMemo(
-    () =>
-      [
-        {
-          name: "World",
-          map: world,
-          max: 15,
-        },
-        {
-          name: "USA",
-          map: usa,
-          max: 10,
-        },
-        {
-          name: "France",
-          map: france,
-          max: 11,
-        },
-      ] as const,
-    [world],
-  );
 
-  const [selectedMap, setSelectedMap] = React.useState(maps[0]);
-  const [range, setRange] = useState([3, 8]);
+  const { selectedMap, setSelectedMap, range, setRange } = useNewGameConfig();
 
   return (
     <div style={{ width: 500, ...style }}>
@@ -49,7 +65,7 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
               setSelectedMap(e.target.value);
             }}
           >
-            {maps.map((map) => (
+            {MAPS.map((map) => (
               <Radio.Button value={map} key={map.name}>
                 {map.name}
               </Radio.Button>
@@ -65,7 +81,7 @@ function NewGameForm({ style }: { style?: React.CSSProperties }) {
             }}
             range
             value={range}
-            onChange={(value) => setRange(value)}
+            onChange={(value) => setRange(value as [number, number])}
             min={1}
             max={selectedMap.max}
           />

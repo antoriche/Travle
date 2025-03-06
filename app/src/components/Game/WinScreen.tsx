@@ -4,9 +4,11 @@ import { Breadcrumb, Button, Tag } from "antd";
 import React from "react";
 import { getCountryName } from "shared/helpers";
 import { generatePathForGame } from "shared/algo";
+import { useNewGameConfig } from "./NewGameForm";
 
 function WinScreen({ gameEngine }: { gameEngine: GameEngine }) {
   const { setGameEngine } = useGameEngine();
+  const newGameConfig = useNewGameConfig();
   if (!gameEngine.won) return null;
   return (
     <div
@@ -43,12 +45,12 @@ function WinScreen({ gameEngine }: { gameEngine: GameEngine }) {
           type="primary"
           onClick={() => {
             const path = generatePathForGame(
-              gameEngine.map.features.map((f) => ({
+              newGameConfig.selectedMap.map.features.map((f) => ({
                 id: `${f.id}`,
                 neighbors: f.properties.border_countries,
               })),
-              3,
-              8,
+              newGameConfig.range[0],
+              newGameConfig.range[1],
             );
             setGameEngine(new GameEngine(gameEngine.map, path[0], path[path.length - 1]));
           }}
