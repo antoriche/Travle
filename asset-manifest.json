@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://antoriche.github.io/Travle/static/css/main.daab5cb7.css",
-    "main.js": "https://antoriche.github.io/Travle/static/js/main.b65da94d.js",
+    "main.js": "https://antoriche.github.io/Travle/static/js/main.8417fd62.js",
     "static/js/432.587ea845.chunk.js": "https://antoriche.github.io/Travle/static/js/432.587ea845.chunk.js",
     "static/js/682.2e61b6fa.chunk.js": "https://antoriche.github.io/Travle/static/js/682.2e61b6fa.chunk.js",
     "static/js/488.1c1c7559.chunk.js": "https://antoriche.github.io/Travle/static/js/488.1c1c7559.chunk.js",
@@ -9,7 +9,7 @@
     "service-worker.js": "https://antoriche.github.io/Travle/service-worker.js",
     "index.html": "https://antoriche.github.io/Travle/index.html",
     "main.daab5cb7.css.map": "https://antoriche.github.io/Travle/static/css/main.daab5cb7.css.map",
-    "main.b65da94d.js.map": "https://antoriche.github.io/Travle/static/js/main.b65da94d.js.map",
+    "main.8417fd62.js.map": "https://antoriche.github.io/Travle/static/js/main.8417fd62.js.map",
     "432.587ea845.chunk.js.map": "https://antoriche.github.io/Travle/static/js/432.587ea845.chunk.js.map",
     "682.2e61b6fa.chunk.js.map": "https://antoriche.github.io/Travle/static/js/682.2e61b6fa.chunk.js.map",
     "488.1c1c7559.chunk.js.map": "https://antoriche.github.io/Travle/static/js/488.1c1c7559.chunk.js.map",
@@ -17,6 +17,6 @@
   },
   "entrypoints": [
     "static/css/main.daab5cb7.css",
-    "static/js/main.b65da94d.js"
+    "static/js/main.8417fd62.js"
   ]
 }
